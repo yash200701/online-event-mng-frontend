@@ -1,0 +1,181 @@
+/* ===== Main Page ===== */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f6f9;
+  color: #222;
+}
+
+/* ===== App Container ===== */
+
+.app-container {
+  min-height: 100vh;
+  padding: 40px;
+}
+
+/* ===== Header ===== */
+
+.header {
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  color: white;
+  padding: 35px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.header p {
+  font-size: 17px;
+  opacity: 0.9;
+}
+
+/* ===== Refresh Button ===== */
+
+.refresh-button {
+  display: block;
+  margin: 0 auto 30px auto;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  background-color: #4f46e5;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.refresh-button:hover {
+  background-color: #3730a3;
+  transform: translateY(-2px);
+}
+
+/* ===== Events Section ===== */
+
+.events-section {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.events-section h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 28px;
+}
+
+/* ===== Event Grid ===== */
+
+.event-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+/* ===== Event Card ===== */
+
+.event-card {
+  background-color: white;
+  border-radius: 14px;
+  padding: 25px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+  border-left: 5px solid #4f46e5;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.event-card h3 {
+  color: #4f46e5;
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.event-card p {
+  margin-bottom: 9px;
+  line-height: 1.5;
+}
+
+.event-description {
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.event-info {
+  margin-top: 15px;
+}
+
+.event-info strong {
+  color: #333;
+}
+
+/* ===== Category ===== */
+
+.category {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  background-color: #ede9fe;
+  color: #5b21b6;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+/* ===== Capacity ===== */
+
+.capacity {
+  margin-top: 12px;
+  font-weight: bold;
+}
+
+/* ===== Messages ===== */
+
+.loading,
+.no-events,
+.error {
+  text-align: center;
+  padding: 30px;
+  font-size: 18px;
+}
+
+.error {
+  color: #dc2626;
+}
+
+.no-events {
+  color: #666;
+}
+
+/* ===== Responsive ===== */
+
+@media (max-width: 768px) {
+  .app-container {
+    padding: 20px;
+  }
+
+  .header h1 {
+    font-size: 28px;
+  }
+
+  .header p {
+    font-size: 15px;
+  }
+
+  .event-grid {
+    grid-template-columns: 1fr;
+  }
+}
